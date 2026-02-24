@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saas Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- google fonts -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+    <!-- font awesones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- navbar 64px here -->
+    <div class="navbar">
+        <img src="./images/logo.png" class="logo">
+        <!-- Hamburger outside of the nav-right div-->
+        <i class="fa fa-bars mobo" onclick="showMenu()"></i>
+
+        <div class="nav-right" id="nav-right">
+            <!-- cross inside the nav-right div  -->
+            <i class="fa fa-times mobo" onclick="hideMenu()"></i>
+            <div class="search-box">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class="fa fa-search search-icon"></i>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><i class="fa fa-fw fa-home"></i></li>
+                    <li><i class="fa fa-fw fa-user"></i></li>
+                    <li><i class="fa-solid fa-arrow-trend-up"></i></li>
+                    <li><i class="fa-solid fa-gear"></i></li>
+                    <div class="avatar-div">
+                        <img src="./images/user.png" alt="">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <!-- Directly below: layered gradient banner (height ~180px) containing:
+    very large greeting ("Good morning, Victoria")
+    weather/mini-stats pill (temperature + emoji)
+    blurred glass-like card floating over the banner (containing KPI: MRR $84.2k ↑14%) -->
+    <div class="banner">
+        <div class="banner-content">
+        <h1>Good Morning, Victoria!</h1>
+        <div class="pill">
+            <h3>24&deg;C</h3>
+            <img src="./images/weather.png" alt="">
+        </div>
+        </div>
+        <div class="kpi-card">
+            <h3 class="kpi-title">KPI</h3>
+            <p class="kpi-value">MRR: $84.2k &nbsp; ↑14%</p>
+        </div>
+    </div>
+
+    <!-- main content masonary layout -->
+     <div class="dashboard">
+        <!-- first card -->
+        <div class="card first-card">
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- table should be scrollable on mobile phone -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text">
+                Sales have improved significantly over the last quarter due to optimized
+                ad campaigns and better audience targeting strategies across multiple
+                digital platforms and regional markets.
+            </p>
+        
+        </div>
+        <!-- second card -->
+        <div class="card second-card">
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- Scrollable Table -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text third-card">
+                Sales have improved significantly over the last quarter due to optimized
+                ad.
+            </p>
+        
+        </div>
+        <!-- third card -->
+        <div class="card third-card" >
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- Scrollable Table -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text">
+                Sales have improved significantly over the last quarter due to optimized
+                ad campaigns and better audience targeting strategies across multiple
+                digital platforms and regional markets.
+            </p>
+        
+        </div>
+        <!-- Fourth Card -->
+        <div class="card fourth-card">
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- Scrollable Table -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text">
+                Sales have improved significantly over the last quarter due to optimized
+                ad campaigns and better audience targeting strategies across multiple
+                digital platforms and regional markets.
+            </p>
+        
+        </div>
+        <!-- fifth card -->
+        <div class="card fifth-card">
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- Scrollable Table -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text">
+                Sales have improved significantly over the last quarter due to optimized
+                ad campaigns and better audience targeting strategies across multiple
+                digital platforms and regional markets.
+            </p>
+        
+        </div>
+        <!-- sixth card -->
+        <div class="card">
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- Scrollable Table -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text">
+                Sales have improved significantly over the last quarter due to optimized
+                ad campaigns and better audience targeting strategies across multiple
+                digital platforms and regional markets.
+            </p>
+        
+        </div>
+        <!-- seventh card -->
+        <div class="card">
+        
+            <h3 class="card-title">Sales Performance</h3>
+        
+            <!-- Fake Chart -->
+            <div class="chart"></div>
+        
+            <!-- Scrollable Table -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>320</td>
+                            <td>$4,200</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>210</td>
+                            <td>$3,150</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Long Text -->
+            <p class="card-text">
+                Sales have improved significantly over the last quarter due to optimized
+                ad campaigns and better audience targeting strategies across multiple
+                digital platforms and regional markets.
+            </p>
+        
+        </div>
+    </div>
+
+    <!-- Load More Button -->
+     <div class="button">
+        <button>Load More</button>
+     </div>
+
+
+
+    <!-- Javascript Link -->
+    <script>
+        const navRight = document.getElementById("nav-right");
+
+        function showMenu() {
+            navRight.style.right = "0";
+        }
+
+        function hideMenu() {
+            navRight.style.right = "-360px";
+        }
+    </script>
+</body>
+
+</html>

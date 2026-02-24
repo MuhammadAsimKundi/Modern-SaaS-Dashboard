@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* background-color: #c9c9c9; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+/* Navbar */
+.navbar {
+    height: 64px;
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #50e8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* To Prevents items from wrapping and pushing width */
+    flex-wrap: nowrap;
+
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-input {
+    height: 35px;
+    width: 180px;
+    min-width: 140px;
+    max-width: 220px;
+    padding: 0 12px 0 36px;
+    border: 2px solid #b7b7b7;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+ul li {
+    list-style: none;
+    padding: 6px 10px;
+}
+
+ul li i {
+font-size: 1.3rem;
+}
+
+
+.avatar-div {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.avatar-div img {
+    height: 36px;
+    border-radius: 50%;
+}
+
+/* hiding the hamburger and cross on large screens */
+.fa-bars.mobo,
+.fa-times.mobo {
+    display: none;
+    font-size: 1.8rem;
+    color: rgb(106, 106, 225);
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    background:
+        linear-gradient(rgba(0,0,0, 0.5),rgba(0, 0, 0, 0.5)),
+        linear-gradient(135deg, #50e8ff, #f3d89d);
+    background-blend-mode: overlay;
+    padding: 30px 16px;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.pill {
+    background: #50e8ff;
+    border-radius: 25px;
+    padding: 6px 12px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pill img{
+    height: 24px;
+    width: auto;
+    border-radius: 10px;
+}
+
+
+
+.kpi-card {
+ position: absolute;
+    top: 80px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 12px 16px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    min-width: 130px;
+    max-width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Dashboard – main content here */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 140px;
+    grid-auto-flow: dense;
+    gap: 12px;
+    padding: 16px;
+    width: 100;
+}
+
+/* cards */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.card-title {
+    font-size:18px;
+    font-weight: 600;
+}
+
+.chart {
+    height: 110px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 320px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+
+th,td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ------ card size as given in requirements ----------- */
+.first-card {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.second-card {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.third-card {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.fourth-card {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.fifth-card {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+/*  More Button */
+.button {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+    padding: 0 16px;
+}
+
+.button button {
+    padding: 12px 48px;
+    border: none;
+    border-radius: 8px;
+    background: #50e8ff;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* for mobile and small screens */
+
+@media (max-width: 768px) {
+
+    .fa-bars.mobo,
+    .fa-times.mobo {
+        display: block;
+    }
+
+    .navbar {
+        padding: 10px 16px;
+    }
+
+    .nav-right {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 24px;
+        transition: right 0.4s ease;
+        z-index: 100;
+        box-shadow: -4px 0 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-right.active {
+        right: 0;
+    }
+
+    .fa-times {
+        display: block;
+        align-self: flex-end;
+        font-size: 2rem;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .banner {
+        padding: 24px 16px;
+        height: auto;
+        min-height: 160px;
+    }
+
+    .kpi-card {
+        position: static;
+        margin: 16px 0 0 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    table {
+        min-width: 300px;
+    }
+
+    .button {
+        margin: 30px 0;
+    }
+}
