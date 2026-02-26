@@ -218,12 +218,12 @@ th,td{
 
 /* ------ card size as given in requirements ----------- */
 .first-card {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .second-card {
-    grid-column: span 1;
+    grid-column: span 2;
     grid-row: span 2;
 }
 
