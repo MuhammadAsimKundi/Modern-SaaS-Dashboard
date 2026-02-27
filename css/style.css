@@ -227,7 +227,7 @@ th,td{
 
 .second-card {
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 4;
 }
 
 .third-card {
@@ -241,7 +241,12 @@ th,td{
 }
 
 .fifth-card {
-    grid-column: span 3;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.seventh-card{
+    grid-column: span 1;
     grid-row: span 2;
 }
 
