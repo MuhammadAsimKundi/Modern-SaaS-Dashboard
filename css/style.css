@@ -175,6 +175,8 @@ font-size: 1.3rem;
     flex-direction: column;
     gap: 12px;
     overflow: hidden;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .card-title {
@@ -183,7 +185,8 @@ font-size: 1.3rem;
 }
 
 .chart {
-    height: 110px;
+    height: 80px;
+    min-height: 80px;
     border-radius: 12px;
     background: linear-gradient(to right, #4facfe, #00f2fe);
 }
@@ -195,7 +198,6 @@ font-size: 1.3rem;
 
 table {
     width: 100%;
-    min-width: 320px;
     border-collapse: collapse;
     font-size: 14px;
 }
@@ -211,14 +213,15 @@ th,td{
     font-size: 14px;
     color: #555;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    /* line-clamp: 2; */
     overflow: hidden;
 }
 
 /* ------ card size as given in requirements ----------- */
 .first-card {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: span 2;
 }
 
@@ -229,17 +232,17 @@ th,td{
 
 .third-card {
     grid-column: span 2;
-    grid-row: span 1;
+    grid-row: span 2;
 }
 
 .fourth-card {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 2;
 }
 
 .fifth-card {
-    grid-column: span 1;
-    grid-row: span 3;
+    grid-column: span 3;
+    grid-row: span 2;
 }
 
 /*  More Button */
