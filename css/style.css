@@ -180,8 +180,10 @@ font-size: 1.3rem;
 }
 
 .card-title {
-    font-size:18px;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #fff;
+    padding: 0px 20px;
 }
 
 .chart {
@@ -189,6 +191,8 @@ font-size: 1.3rem;
     min-height: 80px;
     border-radius: 12px;
     background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    align-items: center;
 }
 
 .table-wrapper {
